@@ -10,7 +10,7 @@
 
 ## 📊 Dashboard Preview
 
-<img width="700" alt="image" src="https://github.com/user-attachments/assets/d9f3f48d-4f4a-4ac9-94f4-6af82308fcf0" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/d9f3f48d-4f4a-4ac9-94f4-6af82308fcf0" />
 
 
 4-page interactive Power BI dashboard covering a global overview, the 2008 vs. 2020 crisis comparison, investment climate scoring, and economic stability/risk.
