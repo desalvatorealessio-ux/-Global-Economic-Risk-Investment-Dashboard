@@ -75,7 +75,7 @@ ORDER BY inflation_pct DESC;
 
 **Answer:**
 
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/26e35c47-adfe-4d1f-92b0-168535a89999" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/26e35c47-adfe-4d1f-92b0-168535a89999" />
 
 *(SQL result shown directly — this isn't a dedicated dashboard visual, but feeds into the "notable years" logic used in section F.)*
 
@@ -133,7 +133,8 @@ ORDER BY total_notable_years DESC;
 
 **Answer:**
 
-<img width="600" alt="Total notable years by country" src="assets/chart_f_notable_years.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/ddd00ee8-21a3-40b0-ab69-184094f7d8ac" />
+
 
 China logs the most statistically unusual years across all four indicators combined (14 notable country-years out of a possible 76), followed by Italy (12). Spain has the fewest (8) despite having the worst Misery Index in the dataset — its swings are large in absolute terms but more evenly spread relative to its *own* historical baseline, which is what the z-score-based "notable year" flag actually measures.
 
@@ -153,7 +154,8 @@ GROUP BY region;
 
 **Answer:**
 
-<img width="600" alt="Avg GDP growth by year and region" src="assets/chart_g_gdp_growth_by_region.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/a3855f08-4d99-4f41-a7a4-620423ad52f6" />
+
 
 The Global Benchmark (US + China) grows more than 3× faster than Europe on average (5.07% vs. 1.57%) and carries meaningfully lower unemployment (5.25% vs. 8.25%), while Europe attracts more than double the FDI relative to GDP (4.66% vs. 2.12%). Inflation is nearly identical between the two groups (2.46% vs. 2.25%) — the gap between these two blocs is about growth and jobs, not price stability.
 
@@ -170,7 +172,8 @@ ORDER BY avg_misery_index;
 
 **Answer:**
 
-<img width="600" alt="Misery Index by country" src="assets/chart_h_misery_index.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/22caab26-7147-490d-8856-6328bc540e37" />
+
 
 Spain's average Misery Index (18.73) is 66% higher than the next-worst country, Italy (11.27), and more than 2.5× China's, the best in the dataset (6.96). Seven of the ten worst individual country-year Misery Index readings across the entire dataset belong to Spain, peaking at 27.5 in 2013 during its debt-crisis-era unemployment surge.
 
@@ -200,9 +203,10 @@ ORDER BY investment_climate_score DESC;
 
 **Answer:**
 
-<img width="600" alt="Investment Climate Score, 2023 ranking" src="assets/chart_i_investment_score_2023.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/0fa88542-926a-42cf-ad83-1423f55466f9" />
 
-<img width="600" alt="Investment Climate Score heatmap, 2005-2023" src="assets/chart_i_investment_heatmap.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/5c3e5fd5-1d1a-4a5c-a04c-913b053a76fd" />
+
 
 China's 2023 Investment Climate Score (91.9) is the highest of any country in any year in the dataset. The top-scoring European country, Germany (59.8), trails it by more than 30 points. This score is deliberately relative — each of the four indicators is rescaled 0–100 *within its own year* before averaging — so it reflects growth and FDI momentum specifically, not overall macro risk: China's own volatility figures elsewhere in this analysis are middling, not the safest in the set.
 
@@ -250,7 +254,8 @@ ORDER BY years_to_recover_2008;
 
 **Answer:**
 
-<img width="600" alt="Crisis recovery speed by country" src="assets/chart_j_recovery_speed.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/a58c594b-33db-4d5b-847a-5fe17cf601dd" />
+
 
 Italy took 15 years to return to its pre-2008 GDP level — recovering only in 2023, the very last year in this dataset — nearly twice as long as the next-slowest country, Spain (8 years). By contrast, every one of the 10 countries recovered from the far deeper 2020 COVID shock within just 1–2 years, including Italy itself. The two crises tested fundamentally different things: being hit hard by 2008 didn't predict being slow to recover from 2020.
 
@@ -259,19 +264,22 @@ Italy took 15 years to return to its pre-2008 GDP level — recovering only in 2
 
 **Page 1 — Overview**
 
-<img width="700" alt="Page 1 - Overview" src="assets/page1_overview.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/a4072c30-c9cf-46f6-9d46-a9c7e38247cf" />
+
 
 **Page 2 — Crisis Impact: 2008 Financial Crisis vs. 2020 COVID Recession**
 
-<img width="700" alt="Page 2 - Crisis Impact" src="assets/page2_crisis_impact.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/26518021-01d4-413e-962b-0f72f23492a5" />
 
 **Page 3 — Investment Climate: Who's Attracting Capital?**
 
-<img width="700" alt="Page 3 - Investment Climate" src="assets/page3_investment_climate.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/2dab752d-d8b8-441d-b235-7fbd8f9d4b75" />
+
 
 **Page 4 — Stability & Risk: Which Economies Are Most Volatile?**
 
-<img width="700" alt="Page 4 - Stability & Risk" src="assets/page4_stability_risk.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/2475738a-2ca1-4254-928b-5652d02e8605" />
+
 
 ---
 ## 💡 Recommendations
