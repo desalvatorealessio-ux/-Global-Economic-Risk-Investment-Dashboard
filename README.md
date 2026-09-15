@@ -203,7 +203,7 @@ ORDER BY investment_climate_score DESC;
 
 **Answer:**
 
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/0fa88542-926a-42cf-ad83-1423f55466f9" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/0fa88542-926a-42cf-ad83-1423f55466f9" />
 
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/5c3e5fd5-1d1a-4a5c-a04c-913b053a76fd" />
 
