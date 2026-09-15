@@ -1,7 +1,9 @@
 # 🌍 Global Economic Risk & Investment Dashboard
 
 **Dataset:** [World Bank Open Data](https://data.worldbank.org/) via the `wbgapi` Python package (free, no auth) — GDP growth, inflation, unemployment, and FDI inflows for 10 countries (8 European + USA/China as global benchmarks), 2005–2023, 190 country-year rows, zero missing values
+
 **Tools:** Python (pandas, numpy), SQLite (DB Browser for SQLite), Power BI
+
 **Scope:** Descriptive analysis only — what happened, and how it breaks down across countries and time. No forecasting or predictive modeling; these findings are meant to support judgment, not replace it. True cross-border M&A data has no free API, so FDI inflows (% of GDP) are used as a legitimate proxy for cross-border investment activity.
 
 📌 **[Jump straight to the Recommendations →](#-recommendations)**
