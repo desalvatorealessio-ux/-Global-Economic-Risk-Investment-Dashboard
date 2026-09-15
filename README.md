@@ -19,10 +19,10 @@ Full dashboard below.
 
 ## 🐍 Data Pipeline (Python)
 
-Unlike Project 1, this dataset isn't a static file — it's pulled live from the World Bank API. Two scripts (in [`python/`](python/)) handle this before any SQL runs:
+This dataset isn't a static file — it's pulled live from the World Bank API. Two Python scripts handle this before any SQL runs:
 
-- **[`01_pull_worldbank_data.py`](python/01_pull_worldbank_data.py)** — pulls all 4 indicators for the 10 countries and 19 years via `wbgapi`, then profiles the raw pull (shape, dtypes, missing values per country, summary stats) before any cleaning decision is made, and saves the untouched result to `worldbank_raw.csv`.
-- **[`02_clean_worldbank_data.py`](python/02_clean_worldbank_data.py)** — reshapes the raw pull into analysis-ready columns, adds a `region` classification (Europe vs. Global Benchmark, via `np.where`), computes year-over-year change per indicator (`pandas` `.diff()`), and flags statistically unusual years with a `numpy`-based z-score computed **per country** (not per dataset) — since a "normal" unemployment rate for Spain isn't the same as a "normal" rate for Germany. Validates the result against known real-world history (Spain's 2013 unemployment peak near 26%, the universal 2020 GDP crash) before saving `worldbank_clean.csv`, which feeds directly into the SQL phase below.
+- **[01_pull_worldbank_data.py](https://github.com/user-attachments/files/32263421/01_pull_worldbank_data.py)** — pulls all 4 indicators for the 10 countries and 19 years via `wbgapi`, then profiles the raw pull (shape, dtypes, missing values per country, summary stats) before any cleaning decision is made, and saves the untouched result to `worldbank_raw.csv`.
+- **[02_clean_worldbank_data.py](https://github.com/user-attachments/files/32263439/02_clean_worldbank_data.py)** — reshapes the raw pull into analysis-ready columns, adds a `region` classification (Europe vs. Global Benchmark, via `np.where`), computes year-over-year change per indicator (`pandas` `.diff()`), and flags statistically unusual years with a `numpy`-based z-score computed **per country** (not per dataset) — since a "normal" unemployment rate for Spain isn't the same as a "normal" rate for Germany. Validates the result against known real-world history (Spain's 2013 unemployment peak near 26%, the universal 2020 GDP crash) before saving `worldbank_clean.csv`, which feeds directly into the SQL phase below.
 
 ## 📌 Solution
 
@@ -57,7 +57,8 @@ ORDER BY gdp_growth_2020;
 
 **Answer:**
 
-<img width="600" alt="Crisis years GDP growth by country" src="assets/chart_b_crisis_gdp_growth.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/6d1a447b-1cba-4f37-b84f-125333898935" />
+
 
 2020 was a sharper shock than 2008 for every European country: Spain (-10.94%) and the UK (-10.05%) posted the deepest single-year contractions in the entire dataset — worse than any country's 2008 or 2009 figure. China is the outlier throughout both crises, staying positive in 2008 (+9.67%), 2009 (+9.41%), and 2020 (+2.34%) — the only country never to contract in either crisis year.
 
@@ -74,7 +75,7 @@ ORDER BY inflation_pct DESC;
 
 **Answer:**
 
-<img width="500" alt="Inflation spikes, 2021-2022 query result" src="assets/chart_c_inflation_spikes_query.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/26e35c47-adfe-4d1f-92b0-168535a89999" />
 
 *(SQL result shown directly — this isn't a dedicated dashboard visual, but feeds into the "notable years" logic used in section F.)*
 
@@ -95,7 +96,8 @@ ORDER BY avg_fdi_pct_gdp DESC;
 
 **Answer:**
 
-<img width="600" alt="FDI attractiveness vs volatility, Netherlands excluded" src="assets/chart_d_fdi_scatter.png" />
+<img width="1781" height="435" alt="image" src="https://github.com/user-attachments/assets/4fbf737d-b22b-4a9d-923d-e169c2e67974" />
+
 
 The Netherlands is a clear statistical outlier: it attracts the most FDI by far (17.85% of GDP on average) but with volatility (29.72) several times higher than any other country's — a pattern consistent with its known role as a financial conduit economy, where large pass-through flows inflate both the average and the swings, rather than reflecting genuine investment attractiveness at that scale. Excluding the Netherlands, the UK, Poland, and Sweden attract the most FDI relative to GDP (3.6–3.8%) with comparatively modest volatility.
 
@@ -111,7 +113,8 @@ ORDER BY country_name, year;
 
 **Answer:**
 
-<img width="600" alt="GDP growth vs unemployment scatter, all country-years" src="assets/chart_e_growth_vs_unemployment.png" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/2c8fde60-bc1b-4ff6-a8c5-fe4be07b023f" />
+
 
 Most country-years cluster tightly — GDP growth between roughly 0% and 12%, unemployment under 10% — regardless of region. The pattern only breaks down in crisis years, most sharply for Spain in 2020 (-10.94% growth paired with 15.53% unemployment, the single most extreme point in the dataset). The Global Benchmark countries (orange) sit consistently toward the low-unemployment, positive-growth side of the cloud.
 
