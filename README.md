@@ -112,7 +112,7 @@ ORDER BY country_name, year;
 
 **Answer:**
 
-<img width="600" height="700"  alt="image" src="https://github.com/user-attachments/assets/2c8fde60-bc1b-4ff6-a8c5-fe4be07b023f" />
+<img width="600" height="200"  alt="image" src="https://github.com/user-attachments/assets/2c8fde60-bc1b-4ff6-a8c5-fe4be07b023f" />
 
 
 Most country-years cluster tightly — GDP growth between roughly 0% and 12%, unemployment under 10% — regardless of region. The pattern only breaks down in crisis years, most sharply for Spain in 2020 (-10.94% growth paired with 15.53% unemployment, the single most extreme point in the dataset). The Global Benchmark countries (orange) sit consistently toward the low-unemployment, positive-growth side of the cloud.
@@ -253,7 +253,7 @@ ORDER BY years_to_recover_2008;
 
 **Answer:**
 
-<img width="600" height="700" alt="image" src="https://github.com/user-attachments/assets/a58c594b-33db-4d5b-847a-5fe17cf601dd" />
+<img width="600" height="200" alt="image" src="https://github.com/user-attachments/assets/a58c594b-33db-4d5b-847a-5fe17cf601dd" />
 
 
 Italy took 15 years to return to its pre-2008 GDP level — recovering only in 2023, the very last year in this dataset — nearly twice as long as the next-slowest country, Spain (8 years). By contrast, every one of the 10 countries recovered from the far deeper 2020 COVID shock within just 1–2 years, including Italy itself. The two crises tested fundamentally different things: being hit hard by 2008 didn't predict being slow to recover from 2020.
